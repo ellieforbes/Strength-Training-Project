@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strength Training 🏋🏼‍♀️</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to top,
+          lightgrey 0%,
+          lightgrey 1%,
+          #e0e0e0 26%,
+          #efefef 48%,
+          #d9d9d9 75%,
+          #bcbcbc 100%
+        );
+        width: 50%;
+        margin: 60px auto;
+      }
+      h1 {
+        text-align: center;
+        color: #79184d;
+      }
+      h2 {
+        text-align: center;
+        color: white;
+        background: black;
+        opacity: 0.7;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 70%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 2;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        opacity: 0.7;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 150ms ease-in-out;
+      }
+      .footer {
+        font-family: monospace;
+      }
+      .container {
+        max-width: 75%;
+        margin: 0 auto;
+        padding: 15px 60px;
+        border: 1px solid gray;
+        background: linear-gradient(
+          to top,
+          #c4c5c7 0%,
+          #dcdddf 52%,
+          #ebebeb 100%
+        );
+        border-radius: 25px;
+        box-shadow: rgba(111, 97, 192, 0.25) 0px 13px 27px -5px,
+          rgba(111, 97, 192, 0.3) 0px 8px 16px;
+      }
+      .learn-more {
+        text-decoration: none;
+        font-size: 15px;
+        color: #79184d;
+        font-weight: bold;
+      }
+      .learn-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .start-now:hover {
+        cursor: pointer;
+        background: grey;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Strength Training
+        <br />
+        🏋🏼‍♀️
+      </h1>
+      <h2><em>The benefits to your body and mind</em></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/090/012/original/StrengthTraining.jpeg?1689411326"
+        alt="Woman Weightlifting"
+        width="400"
+      />
+
+      <p>
+        <strong
+          >If you haven’t tried strength training, now is the time to
+          start.</strong
+        >
+        <br />
+        Strength training provides numerous health benefits, such as a lower
+        risk of heart disease and diabetes, stronger bones, better brain health
+        and mood, and improved self-esteem.
+        <br />
+        Fortunately, strength training isn’t just lifting weights at the gym.
+        You can get in a great strength-training workout using your body weight,
+        resistance bands, free weights, or even items around your house.
+        <br />
+        Whether you’re new or experienced, strength training is for everyone.
+      </p>
+      <a
+        href="https://www.healthline.com/health/fitness/benefits-of-strength-training#bottom-line"
+        target="_blank"
+        class="learn-more"
+      >
+        <em> Learn more about the benefits of strength training here!</em>
+      </a>
+      <hr />
+      <button class="start-now">💪🏼 Start Strength Training Now 💪🏼</button>
+      <p class="footer">This page was built by Ellie Forbes</p>
+    </div>
+    <script>
+      function startNow() {
+        alert("Are you ready to start strength training?");
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("What is your email address?");
+        let h2 = document.querySelector("h2");
+        if (age >= 13) {
+          h2.innerHTML =
+            "Thank you " + name + "! We will be in touch via email. 😄";
+        } else {
+          h2.innerHTML = "Sorry " + name + ", you are too young to join. 😔";
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", startNow);
+    </script>
+  </body>
+</html>
